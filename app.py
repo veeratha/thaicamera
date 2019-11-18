@@ -5,3 +5,8 @@ app = Flask(__name__)
 @app.route("/")
 def home():
     return "Hello, Flask on AZURE!"
+
+
+@app.route("/upload")
+def upload():
+    return "หน้าอัพโหลดรูป"
