@@ -1,4 +1,5 @@
-from flask import Flask
+from flask import Flask,render_template
+from datetime import datetime
 app = Flask(__name__)
 
 
@@ -9,4 +10,5 @@ def home():
 
 @app.route("/upload")
 def upload():
-    return "หน้าอัพโหลดรูป"
+    dt = datetime.now()
+    return "หน้าอัพโหลดรูป "+dt.strftime("%Y-%m-%d %H:%M")
